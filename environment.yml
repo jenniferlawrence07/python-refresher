@@ -1,0 +1,9 @@
+name: best_practice
+channels:
+  - conda-forge
+dependencies:
+  - pip
+  - pycodestyle
+  - python
+
+prefix: "/Users/jenniferlawrence/miniforge3/envs/best_practice"
