@@ -43,3 +43,12 @@ This runs three examples:
 - one working example
 - one example with a missing file
 - one example that cannot convert the selected values to integers
+
+# testing updates
+
+Added functions to calculate mean, median, and standard deviation.
+
+Added unit tests for the utility functions using Python `unittest`.
+
+Added functional tests for `print_fires.py` using `ssshtest`, including
+tests for the different operations and exit codes
