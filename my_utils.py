@@ -16,3 +16,32 @@ def get_column(file_name, query_column, query_value, result_column=1):
         print("Could not find file")
 
     return results
+
+
+def find_mean(values):
+    return sum(values) / len(values)
+
+
+def find_median(values):
+    sorted_values = sorted(values)
+    middle = len(sorted_values) // 2
+
+    if len(sorted_values) % 2 == 1:
+        return sorted_values[middle]
+
+    return (
+        sorted_values[middle - 1] + sorted_values[middle]
+    ) / 2
+
+
+def find_std(values):
+    mean = find_mean(values)
+
+    squared_differences = [
+        (value - mean) ** 2
+        for value in values
+    ]
+
+    variance = sum(squared_differences) / len(values)
+
+    return variance ** 0.5
