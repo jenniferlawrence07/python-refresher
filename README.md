@@ -1,22 +1,54 @@
-# python-refresher
+##python-refresher
 
-## Assignment 1: Git and Python
+This project reads agricultural CO2 emissions data from a CSV file and
+returns emissions values for a selected country.
 
-For this assignment I finished writing get_column() in my_utils.py. It reads
-through a CSV file line by line, and for any row where a certain column matches
-a value I'm searching for, it grabs the value from another column I want and
-adds it to a list. At the end it returns that list.
+##installation**
 
-### What I did
-- Wrote the get_column() function so it actually works instead of just
-  returning None.
-- Gave result_column a default value of 1, so you don't have to pass it every
-  time if you just want that column.
-- Fixed print_fires.py so it actually calls get_column() correctly and prints
-  out forest fire emissions for the United States using the data in
-  Agrofood_co2_emission.csv.
-- Added run.sh so you can just run ./run.sh instead of typing out the python
-  command every time.
+This project uses a mamba environment with Python and `pycodestyle`.
 
-### Running it 
+Create the environment with:
+
+```bash
+mamba env create -f environment.yml
+
+## activate it 
+mamba activate best_practice
+
+##use
+
+The program uses the `Agrofood_co2_emission.csv` file as input.
+
+The command takes four arguments:
+
+1. country
+2. country column
+3. fires column
+4. file name
+
+#example run script
+
+```bash
+python3 print_fires.py "United States of America" 0 3 Agrofood_co2_emission.csv
+
+### running it 
 Run ./run.sh and it'll print out the forest fire emissions numbers for the US. Agrofood_co2_emission.csv in the folder for this to work.
+ 
+##examples with errors
+
+./run.sh
+
+This runs three examples:
+
+- one working example
+- one example with a missing file
+- one example that cannot convert the selected values to integers
+
+# testing updates
+
+Added functions to calculate mean, median, and standard deviation.
+
+Added unit tests for the utility functions using Python `unittest`.
+
+Added functional tests for `print_fires.py` using `ssshtest`, including
+tests for the different operations and exit codes
