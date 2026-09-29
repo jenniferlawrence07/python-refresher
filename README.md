@@ -52,3 +52,14 @@ Added unit tests for the utility functions using Python `unittest`.
 
 Added functional tests for `print_fires.py` using `ssshtest`, including
 tests for the different operations and exit codes
+
+##Continuous Integration
+
+Added a GitHub Actions workflow for continuous integration.
+
+The workflow automatically runs:
+- pycodestyle style checks
+- unit tests
+- functional tests
+
+The workflow runs when any branch is pushed and when a pull request is made to master
