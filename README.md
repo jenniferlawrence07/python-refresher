@@ -62,4 +62,4 @@ The workflow automatically runs:
 - unit tests
 - functional tests
 
-The workflow runs when any branch is pushed and when a pull request is made to master.
+The workflow runs when any branch is pushed and when a pull request is made to master
